@@ -1,0 +1,204 @@
+/* Using CSS to style the duplicated TEUKHO website */
+/* https://www.teukho.com/en/teukho-collection/ */
+
+/* Making the site more responsive */
+.container{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+/* Imported Google fonts */
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.page{
+    background-color: rgba(20,20,16,0.95);
+    color: white;
+}
+
+/* Top navigation area with logo, links and flags */
+.top-nav{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: x-small;
+    color: #a0a0a0;
+}
+.top-nav li{
+    display: inline;
+    vertical-align: middle;
+}
+.logo{
+    margin-left: 40px;
+}
+.top-nav a{
+    color: #a0a0a0;
+    text-decoration: none;
+}
+.collection a{
+    margin-left: 290px   
+}
+.about a{
+    margin-left: 20px;    
+}
+.contacts a{
+    margin-left: 20px;    
+}
+.italian a{
+    margin-left: 300px;    
+}
+.english a{
+    margin-left: 20px;   
+}
+
+/* Used Flexbox to layout the 3 photos equally spaced and centralised horizontally */
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.flex-item{
+    padding: 20px;
+    flex: 30%;
+ 
+}
+.flex-item h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: tan;
+}
+.flex-item p{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 1.7em;
+    color: #bcbcbc;
+}
+/* Responsive layout - makes a 1 column layout instead of a 3 column layout */
+@media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+/* Contact Form */
+.more-info{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: #c1a893;
+    padding-bottom: 10px;
+}
+
+/* The baseplate of the form */
+.contact-form{
+    background-color: black;
+    padding: 50px;
+    margin-left: 120px; 
+    height: 310px;
+    width: 868px;
+}
+
+/* Styling of name, surname, email, phone input boxes */
+.your-details input{
+    background-color: #302820;
+    color: #5e5e5e;
+    border: 1px;
+    width: 400px;
+    height: 40px;
+    margin-right: 30px;
+}
+
+/* Styling the temporary placeholders */
+.your-details ::placeholder{
+    font-family: 'Work Sans', sans-serif;
+    padding-left: 10px;
+}
+
+/* Positioning name/surname and email/phone input boxes in line */
+.details-inline{
+    display: flex;
+    flex-flow: row wrap; /* Will wrap on smaller screens */
+    align-items: center;
+}
+
+/* Styling the longer city input box */
+.your-city input{
+    background-color: #302820;
+    color: #5e5e5e;
+    border: none;
+    width: 833px;
+    height: 40px;
+}
+.your-city ::placeholder{
+    font-family: 'Work Sans', sans-serif;
+    padding-left: 10px;
+}
+
+/* Borders of all input boxes & textbox, turn red when selected */
+input:focus {
+    outline: 1px solid red;  
+   }
+textarea:focus {
+    outline: 1px solid red;  
+   }  
+
+/* Styling the expandable message box  */
+.message textarea{
+    background-color: #302820;
+    color: #5e5e5e;
+    border: none;
+    width: 833px;
+    height: 80px;
+}
+.message ::placeholder{
+    font-family: 'Work Sans', sans-serif;
+    padding: 10px;
+}
+
+/* Styling the submit button */
+#submit{
+    display: block;
+    background-color: black;
+    font-size: 20px;
+    font-weight: 500;
+    color: #a0816e;
+    width: 120px;
+    height: 50px;
+    border-width: 1px;
+    border-color: #a0816e;
+    border-style: solid;
+    margin-left: 713px;
+    margin-top: 15px;
+}
+
+/* Colour change when the submit button is selected */
+#submit:focus {
+    color: orange;
+    outline: 2px solid orange;  
+   }
+
+/* Colour change when the submit button is hovered over, but not selected */
+#submit:hover {
+    border-color: white;  
+}
+
+/* Used my own footer as this is a copied site after all!!! */
+footer{
+    background-color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    text-align: center;
+}
